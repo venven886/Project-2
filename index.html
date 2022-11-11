@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body style="background-color: #474043;">
+		<div class="box">
+			<div class="text-box">
+				<p style="font: size 20px;"></p>
+				
+				but is it locked? but is it locked?<br>
+				but is it locked? but is it locked?<br>
+				but is it locked? but is it locked?<br>
+				but is it locked? but is it locked?<br>
+				but is it locked? but is it locked?<br>
+				but is it locked? but is it locked?<br>
+				but is it locked? but is it locked?<br>
+				but is it locked? but is it locked?<br>
+				but is it locked? but is it locked?<br>
+				but is it locked? but is it loc<span class="btn">ke</span>d?<br>
+				but is it locked? but is it loc<span class="btn">ke</span>d?<br>
+				but is it locked? but is it locked?<br>
+				but is it locked? but is it locked?<br>
+				but is it locked? but is it locked?<br>
+				but is it locked? but is it locked?<br>
+				but is it locked? but is it locked?<br>
+				but is it locked? but is it locked?<br>
+				but is it locked? but is it locked?<br>
+				but is it locked? but is it locked?<br>
+				but is it locked? but is it locked?<br>
+				
+			
+			</div>
+			<div class="poetry-box">
+				<p style="text-align: left; font-size: 17px;">
+					      Siren 
+				 <br>candle burning while you’re gone,<br>
+				the oven still on, <br>
+				and the door-you know you closed it,<br>
+				but is it locked?<br>
+		        
+			</div>
+		</div>
+		<div class="yuan"></div>
+	
+
+	</body>
+</html>
+<script src="./jquery.min.js"></script>
+<script>
+	$(".btn").click(function(){
+		$(".text-box").css("-moz-animation","openDoor 0.5s linear infinite 0s both")
+		$(".text-box").css("animation","openDoor 2s linear 1 alternate 1s both")
+		$(".poetry-box").css("transform","scale(1)")
+		$(".poetry-box").css("transition","transform 3s")
+		$(".poetry-box").css("transition-delay","1s")
+		$(".yuan").css("left","700px")
+		$(".yuan").css("transition","left 3s")
+		$(".yuan").css("transition-delay","1s")
+	})
+</script>
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+		font-family: Arial;
+		font-weight:bolder;
+	}
+
+	.box {
+		margin: 50px auto;
+		width: 314px;
+		height: 516px;
+		background-image: url(./k.png);
+		background-size: cover;
+		perspective: 1000px;
+	}
+
+	.text-box {
+		background-color:#474043;;
+		position: relative;
+		line-height: 25px;
+		top: 10px;
+		left: 15px;
+		font-size: 18px;
+		width: 280px;
+		transform-origin: left;
+		z-index: 5;
+	}
+
+	.btn {
+		color: rgb(248, 25, 25);
+	}
+	
+	.btn:hover {
+		cursor: pointer;
+	}
+	
+	.poetry-box{
+		font-size: 16px;
+		width: calc(100% - 50px);
+		margin: -300px auto 0 auto;
+		transform:scale(0.1);
+	}
+	
+	.yuan{
+		width: 50px;
+		height: 30px;
+		border-radius: 50%;
+		background-color: white;
+		position: absolute;
+		top: 600px;
+		left: 1000px;
+	}
+	
+	.dong{
+		text-align: center;
+		line-height: 60px;
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		background-color: aliceblue;
+		position: absolute;
+		top: 100px;
+		left: 100px;
+		animation: dong 2s infinite;
+	}
+	
+	@keyframes dong{
+		0%{
+			transform:scale(0.5)
+		}
+		50%{
+			transform:scale(1)
+		}
+		100%{
+			transform:scale(0.5)
+		}
+	}
+
+
+	@-webkit-keyframes openDoor {
+		0% {
+			transform: rotateY(0deg);
+		}
+
+		100% {
+			transform: rotateY(-100deg);
+		}
+	}
+
+	@-moz-keyframes openDoor {
+		0% {
+			transform: rotateY(0deg);
+		}
+
+		100% {
+			transform: rotateY(-100deg);
+		}
+	}
+</style>
